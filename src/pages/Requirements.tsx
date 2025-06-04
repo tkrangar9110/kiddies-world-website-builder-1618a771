@@ -1,4 +1,3 @@
-
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { BookOpen, GraduationCap, Users, Brain, Star, CheckCircle, Package, Baby, School } from "lucide-react";
@@ -73,12 +72,14 @@ const Requirements = () => {
       icon: GraduationCap,
       color: "bg-purple-500",
       basicRequirements: [
-        "Age-appropriate social skills",
-        "Basic letter recognition (uppercase and lowercase)",
-        "Number recognition (1-20)",
-        "Ability to write first name",
-        "Following classroom rules and routines",
-        "School readiness assessment completion"
+        "1 Dozen copy books (Provided by parents)",
+        "2 packs of jumbo color pencils (Provided by parents)",
+        "2 packs of pencils (Provided by parents)",
+        "1 pack of erasers & 1 pack of sharpeners (Provided by parents)",
+        "Early Mathematics Book 1 (Provided by parents)",
+        "Early English Book 1 (Provided by school)",
+        "My ABC Book (Provided by school)",
+        "Jumbo Coloring & Activities Book (Provided by school)"
       ],
       booksAndReaders: [
         "Beginning reader series (Level 1)",
@@ -87,6 +88,13 @@ const Requirements = () => {
         "Science exploration books",
         "Character development story books",
         "Writing practice books"
+      ],
+      readers: [
+        "Cat",
+        "Kitty Cat",
+        "Respect and Care",
+        "Hats",
+        "Teach the world to Read (Book 1)"
       ]
     },
     {
@@ -294,7 +302,7 @@ const Requirements = () => {
                         <div>
                           <h3 className="text-lg font-semibold text-gray-700 mb-4 flex items-center">
                             <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
-                            {grade.title === "Grade Two" ? "Required Supplies" : "Basic Requirements"}
+                            {grade.title === "Grade Two" || grade.title === "Pre-K (4-5 years)" ? "Required Supplies" : "Basic Requirements"}
                           </h3>
                           <ul className="space-y-3">
                             {grade.basicRequirements.map((requirement, reqIndex) => (
