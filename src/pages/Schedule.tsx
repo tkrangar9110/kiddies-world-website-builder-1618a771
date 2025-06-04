@@ -5,46 +5,18 @@ import { Clock, Calendar, Sun, Moon } from "lucide-react";
 
 const Schedule = () => {
   const dailySchedule = [
-    { time: "6:00 AM", activity: "Early Morning Arrival & Free Play", icon: Sun },
-    { time: "7:00 AM", activity: "Breakfast Time", icon: Clock },
-    { time: "8:00 AM", activity: "Circle Time & Morning Activities", icon: Calendar },
-    { time: "9:30 AM", activity: "Learning Centers & Educational Play", icon: Clock },
-    { time: "10:30 AM", activity: "Outdoor Play & Physical Activities", icon: Sun },
-    { time: "11:30 AM", activity: "Lunch Preparation & Lunch", icon: Clock },
-    { time: "12:30 PM", activity: "Quiet Time & Nap/Rest Period", icon: Moon },
-    { time: "2:30 PM", activity: "Afternoon Snack", icon: Clock },
-    { time: "3:00 PM", activity: "Arts & Crafts / STEM Activities", icon: Calendar },
-    { time: "4:00 PM", activity: "Free Play & Homework Help (School-age)", icon: Clock },
-    { time: "5:00 PM", activity: "Outdoor Play & Pick-up Time", icon: Sun },
-    { time: "6:30 PM", activity: "Final Pick-up & Evening Care", icon: Moon }
-  ];
-
-  const academicSchedule = [
-    {
-      day: "Monday",
-      focus: "Language & Literacy",
-      activities: ["Phonics practice", "Story time", "Letter recognition", "Writing activities"]
-    },
-    {
-      day: "Tuesday", 
-      focus: "Mathematics & Numbers",
-      activities: ["Number games", "Counting exercises", "Shape recognition", "Basic math concepts"]
-    },
-    {
-      day: "Wednesday",
-      focus: "Science & Discovery",
-      activities: ["Nature exploration", "Simple experiments", "Science observations", "STEM activities"]
-    },
-    {
-      day: "Thursday",
-      focus: "Creative Arts & Music",
-      activities: ["Art projects", "Music and movement", "Creative expression", "Cultural activities"]
-    },
-    {
-      day: "Friday",
-      focus: "Social Studies & Life Skills",
-      activities: ["Community helpers", "Life skills practice", "Social interaction games", "Show and tell"]
-    }
+    { time: "8:00 - 8:30", activity: "DEVOTION", icon: Sun },
+    { time: "8:30 - 9:00", activity: "Circle Time", icon: Calendar },
+    { time: "9:00 - 11:00", activity: "Learning Time/Game", icon: Clock },
+    { time: "11:00 - 11:45", activity: "Launch/Recess", icon: Sun },
+    { time: "12:00 - 12:15", activity: "Story Time/Rhymes", icon: Calendar },
+    { time: "12:05 - 1:00", activity: "Music (Pre K-3rd Grade) Mon., Wed & Friday", icon: Clock },
+    { time: "12:05 - 1:00", activity: "Computer (Pre K 3rd Grade) Tues & Thursday", icon: Clock },
+    { time: "1:00 - 1:20", activity: "Naptime (Daycare - Pre-K)", icon: Moon },
+    { time: "1:20 - 2:00", activity: "Reading Readiness", icon: Calendar },
+    { time: "2:00 - 2:30", activity: "Snacks", icon: Clock },
+    { time: "2:30 - 2:50", activity: "Free Play", icon: Sun },
+    { time: "3:00 - 4:00", activity: "Study Class", icon: Calendar }
   ];
 
   return (
@@ -55,7 +27,7 @@ const Schedule = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
-              Daily & Academic <span className="text-orange-600">Schedule</span>
+              Daily <span className="text-orange-600">Schedule</span>
             </h1>
             <p className="text-xl text-gray-600 leading-relaxed">
               Structured learning and play times designed for optimal development
@@ -88,48 +60,23 @@ const Schedule = () => {
                   );
                 })}
               </div>
-            </div>
-          </div>
-
-          {/* Academic Schedule */}
-          <div>
-            <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">
-              Weekly Academic Focus
-            </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {academicSchedule.map((day, index) => (
-                <div key={index} className="bg-white rounded-lg shadow-lg p-6">
-                  <div className="flex items-center mb-4">
-                    <div className="bg-blue-500 rounded-full p-2 mr-3">
-                      <Calendar className="h-6 w-6 text-white" />
-                    </div>
-                    <h3 className="text-xl font-bold text-gray-800">{day.day}</h3>
-                  </div>
-                  
-                  <h4 className="text-lg font-semibold text-blue-600 mb-3">
-                    {day.focus}
-                  </h4>
-                  
-                  <ul className="space-y-2">
-                    {day.activities.map((activity, actIndex) => (
-                      <li key={actIndex} className="flex items-start">
-                        <div className="w-2 h-2 bg-green-500 rounded-full mr-3 mt-2 flex-shrink-0"></div>
-                        <span className="text-gray-600 text-sm">{activity}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
+              
+              <div className="mt-6 p-4 bg-blue-50 rounded-lg">
+                <p className="text-blue-800 font-semibold text-center">
+                  Note: Every Friday school lets out at 2:30pm
+                </p>
+              </div>
             </div>
           </div>
 
           {/* Operating Hours */}
-          <div className="mt-16 bg-gradient-to-r from-blue-600 to-green-600 rounded-lg p-8 text-white text-center">
+          <div className="bg-gradient-to-r from-blue-600 to-green-600 rounded-lg p-8 text-white text-center">
             <h3 className="text-2xl font-bold mb-4">Operating Hours</h3>
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <h4 className="text-lg font-semibold mb-2">Monday - Friday</h4>
-                <p className="text-lg">6:00 AM - 6:30 PM</p>
+                <p className="text-lg">8:00 AM - 4:00 PM</p>
+                <p className="text-sm opacity-90 mt-2">Friday: 8:00 AM - 2:30 PM</p>
               </div>
               <div>
                 <h4 className="text-lg font-semibold mb-2">Weekend Care</h4>
