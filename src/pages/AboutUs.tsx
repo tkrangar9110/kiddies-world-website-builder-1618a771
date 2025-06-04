@@ -39,24 +39,24 @@ const AboutUs = () => {
                 </div>
                 <h2 className="text-3xl font-bold text-gray-800">Our Values</h2>
               </div>
-              <ul className="text-gray-600 space-y-3 text-lg">
-                <li className="flex items-center">
-                  <Shield className="h-5 w-5 text-green-500 mr-3" />
-                  Safety and security for every child
-                </li>
-                <li className="flex items-center">
-                  <Users className="h-5 w-5 text-blue-500 mr-3" />
-                  Inclusive and supportive environment
-                </li>
-                <li className="flex items-center">
-                  <Heart className="h-5 w-5 text-pink-500 mr-3" />
-                  Nurturing care and encouragement
-                </li>
-                <li className="flex items-center">
-                  <Star className="h-5 w-5 text-yellow-500 mr-3" />
-                  Excellence in early childhood education
-                </li>
-              </ul>
+              <div className="text-gray-600 space-y-4 text-sm">
+                <div>
+                  <h3 className="font-semibold text-blue-600 mb-2">Quality Care and Trust</h3>
+                  <p>When parents are looking for early learning and child care programs they need to find someone they can trust. At Kiddies World Kinder Care Center, we ensure and continuously improve our services to meet the needs of the children and families we service.</p>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-green-600 mb-2">Lifelong Learning</h3>
+                  <p>At KWKCC we believe that we all share a responsibility to support and nurture the children's and our own natural desire to be lifelong learners. We put ourselves and our mind of learning to the same level as the child's and commit to our own professional development and personal growth. We learn alongside the children and their families and embrace the opportunity to learn and grow each day.</p>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-purple-600 mb-2">Partnership</h3>
+                  <p>Respectful relationships are very important and on which our organization operates. We believe that the quality of care we provide is measured by the quality of relationships we have with children, families, employees and the school administration. We are committed to ensuring these relationships are respectful: warm and caring: honest and open; fair and equitable.</p>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-orange-600 mb-2">Fiscal Responsibility</h3>
+                  <p>We are committed to financial prudence and sustainability - to making decisions that take into consideration the overall financial health of the organization in order to meet our goals and objectives. We conduct ourselves in a manner that is professional and according to all business practices that are legal and ethical.</p>
+                </div>
+              </div>
             </div>
           </div>
 
