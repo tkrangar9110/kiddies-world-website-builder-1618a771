@@ -68,7 +68,7 @@ const Requirements = () => {
       ]
     },
     {
-      title: "Pre-K (4-5 years)",
+      title: "Pre-K",
       icon: GraduationCap,
       color: "bg-purple-500",
       basicRequirements: [
@@ -80,14 +80,6 @@ const Requirements = () => {
         "Early English Book 1 (Provided by school)",
         "My ABC Book (Provided by school)",
         "Jumbo Coloring & Activities Book (Provided by school)"
-      ],
-      booksAndReaders: [
-        "Beginning reader series (Level 1)",
-        "Phonics workbooks",
-        "Math concept books (addition/subtraction basics)",
-        "Science exploration books",
-        "Character development story books",
-        "Writing practice books"
       ],
       readers: [
         "Cat",
@@ -298,11 +290,11 @@ const Requirements = () => {
                     </CardHeader>
                     
                     <CardContent>
-                      <div className="grid md:grid-cols-2 gap-8">
+                      <div className={grade.title === "Pre-K" ? "grid" : "grid md:grid-cols-2 gap-8"}>
                         <div>
                           <h3 className="text-lg font-semibold text-gray-700 mb-4 flex items-center">
                             <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
-                            {grade.title === "Grade Two" || grade.title === "Pre-K (4-5 years)" ? "Required Supplies" : "Basic Requirements"}
+                            {grade.title === "Grade Two" || grade.title === "Pre-K" ? "Required Supplies" : "Basic Requirements"}
                           </h3>
                           <ul className="space-y-3">
                             {grade.basicRequirements.map((requirement, reqIndex) => (
@@ -314,34 +306,36 @@ const Requirements = () => {
                           </ul>
                         </div>
                         
-                        <div>
-                          <h3 className="text-lg font-semibold text-gray-700 mb-4 flex items-center">
-                            <BookOpen className="h-5 w-5 text-purple-500 mr-2" />
-                            Required Books & Textbooks
-                          </h3>
-                          <ul className="space-y-3">
-                            {grade.booksAndReaders.map((book, bookIndex) => (
-                              <li key={bookIndex} className="flex items-start">
-                                <div className="w-2 h-2 bg-purple-500 rounded-full mr-3 mt-2 flex-shrink-0"></div>
-                                <span className="text-gray-600">{book}</span>
-                              </li>
-                            ))}
-                          </ul>
-                          
-                          {grade.readers && (
-                            <div className="mt-6">
-                              <h4 className="text-md font-semibold text-gray-700 mb-3">Required Readers</h4>
-                              <ul className="space-y-2">
-                                {grade.readers.map((reader, readerIndex) => (
-                                  <li key={readerIndex} className="flex items-start">
-                                    <div className="w-2 h-2 bg-orange-500 rounded-full mr-3 mt-2 flex-shrink-0"></div>
-                                    <span className="text-gray-600 text-sm">{reader}</span>
-                                  </li>
-                                ))}
-                              </ul>
-                            </div>
-                          )}
-                        </div>
+                        {grade.title !== "Pre-K" && grade.booksAndReaders && (
+                          <div>
+                            <h3 className="text-lg font-semibold text-gray-700 mb-4 flex items-center">
+                              <BookOpen className="h-5 w-5 text-purple-500 mr-2" />
+                              Required Books & Textbooks
+                            </h3>
+                            <ul className="space-y-3">
+                              {grade.booksAndReaders.map((book, bookIndex) => (
+                                <li key={bookIndex} className="flex items-start">
+                                  <div className="w-2 h-2 bg-purple-500 rounded-full mr-3 mt-2 flex-shrink-0"></div>
+                                  <span className="text-gray-600">{book}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        )}
+                        
+                        {grade.readers && (
+                          <div className={grade.title === "Pre-K" ? "mt-6" : "mt-6"}>
+                            <h4 className="text-md font-semibold text-gray-700 mb-3">Required Readers</h4>
+                            <ul className="space-y-2">
+                              {grade.readers.map((reader, readerIndex) => (
+                                <li key={readerIndex} className="flex items-start">
+                                  <div className="w-2 h-2 bg-orange-500 rounded-full mr-3 mt-2 flex-shrink-0"></div>
+                                  <span className="text-gray-600 text-sm">{reader}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        )}
                       </div>
                     </CardContent>
                   </Card>
