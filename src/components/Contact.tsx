@@ -31,8 +31,9 @@ const Contact = () => {
               </CardHeader>
               <CardContent className="text-center">
                 <p className="text-gray-600">
-                  123 Learning Lane<br />
-                  Happy Valley, State 12345
+                  Red Hill Field, Virginia<br />
+                  Montserrado County<br />
+                  Monrovia, Liberia
                 </p>
               </CardContent>
             </Card>
@@ -46,10 +47,10 @@ const Contact = () => {
               </CardHeader>
               <CardContent className="text-center">
                 <p className="text-gray-600 font-medium text-lg">
-                  (555) 123-KIDS
+                  0886510567 / 0776445800
                 </p>
                 <p className="text-gray-500 text-sm mt-2">
-                  Monday - Friday: 6:00 AM - 6:30 PM
+                  Monday - Friday: 8:00 AM - 4:00 PM
                 </p>
               </CardContent>
             </Card>
@@ -63,7 +64,7 @@ const Contact = () => {
               </CardHeader>
               <CardContent className="text-center">
                 <p className="text-gray-600">
-                  info@kiddiesworld.com
+                  kiddiesworldkcc13@gmail.com
                 </p>
               </CardContent>
             </Card>

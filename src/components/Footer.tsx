@@ -45,19 +45,19 @@ const Footer = () => {
             <div className="space-y-3 text-gray-300">
               <div className="flex items-center">
                 <MapPin className="h-4 w-4 mr-2 text-orange-400" />
-                <span className="text-sm">123 Learning Lane, Happy Valley</span>
+                <span className="text-sm">Red Hill Field, Virginia, Montserrado County, Monrovia, Liberia</span>
               </div>
               <div className="flex items-center">
                 <Phone className="h-4 w-4 mr-2 text-orange-400" />
-                <span className="text-sm">(555) 123-KIDS</span>
+                <span className="text-sm">0886510567 / 0776445800</span>
               </div>
               <div className="flex items-center">
                 <Mail className="h-4 w-4 mr-2 text-orange-400" />
-                <span className="text-sm">info@kiddiesworld.com</span>
+                <span className="text-sm">kiddiesworldkcc13@gmail.com</span>
               </div>
               <div className="flex items-center">
                 <Clock className="h-4 w-4 mr-2 text-orange-400" />
-                <span className="text-sm">Mon-Fri: 6:00 AM - 6:30 PM</span>
+                <span className="text-sm">Mon-Fri: 8:00 AM - 4:00 PM</span>
               </div>
             </div>
           </div>
