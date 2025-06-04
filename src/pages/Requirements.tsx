@@ -1,7 +1,7 @@
 
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { BookOpen, GraduationCap, Users, Brain, Star, CheckCircle, Package, Baby } from "lucide-react";
+import { BookOpen, GraduationCap, Users, Brain, Star, CheckCircle, Package, Baby, School } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const Requirements = () => {
@@ -87,6 +87,41 @@ const Requirements = () => {
         "Science exploration books",
         "Character development story books",
         "Writing practice books"
+      ]
+    },
+    {
+      title: "Grade Two",
+      icon: School,
+      color: "bg-indigo-500",
+      basicRequirements: [
+        "1 Dozen copy books (Provided by parents)",
+        "2 packs of jumbo color pencils (Provided by parents)",
+        "2 packs of pencils (Provided by parents)",
+        "1 pack of erasers & 1 pack of sharpeners (Provided by parents)"
+      ],
+      booksAndReaders: [
+        "Elementary Mathematics for Liberia BK-2",
+        "Mathematics Workbook 2",
+        "Liberia Social Studies BK2",
+        "Star Natural Science for Primary BK2",
+        "Grammar & Comprehension 2",
+        "Phonics for Liberian Schools BK2",
+        "Modern Hand Writing BK2",
+        "Spelling Manual for Liberian Schools 2-6"
+      ],
+      readers: [
+        "Saydah goes to school",
+        "Notty goat",
+        "Dwede wants to read",
+        "The palm trees",
+        "Duyongee and the red bicycle",
+        "Today my doctor told me",
+        "Blapoh dream",
+        "Friends for life",
+        "Another kinds of ship",
+        "Sata has friends",
+        "The adventures of a brother and sister (T-Girl's Story)",
+        "The adventures of a brother and sister (Berg doll Story)"
       ]
     },
     {
@@ -259,7 +294,7 @@ const Requirements = () => {
                         <div>
                           <h3 className="text-lg font-semibold text-gray-700 mb-4 flex items-center">
                             <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
-                            Basic Requirements
+                            {grade.title === "Grade Two" ? "Required Supplies" : "Basic Requirements"}
                           </h3>
                           <ul className="space-y-3">
                             {grade.basicRequirements.map((requirement, reqIndex) => (
@@ -274,7 +309,7 @@ const Requirements = () => {
                         <div>
                           <h3 className="text-lg font-semibold text-gray-700 mb-4 flex items-center">
                             <BookOpen className="h-5 w-5 text-purple-500 mr-2" />
-                            Required Books & Readers
+                            Required Books & Textbooks
                           </h3>
                           <ul className="space-y-3">
                             {grade.booksAndReaders.map((book, bookIndex) => (
@@ -284,6 +319,20 @@ const Requirements = () => {
                               </li>
                             ))}
                           </ul>
+                          
+                          {grade.readers && (
+                            <div className="mt-6">
+                              <h4 className="text-md font-semibold text-gray-700 mb-3">Required Readers</h4>
+                              <ul className="space-y-2">
+                                {grade.readers.map((reader, readerIndex) => (
+                                  <li key={readerIndex} className="flex items-start">
+                                    <div className="w-2 h-2 bg-orange-500 rounded-full mr-3 mt-2 flex-shrink-0"></div>
+                                    <span className="text-gray-600 text-sm">{reader}</span>
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          )}
                         </div>
                       </div>
                     </CardContent>
@@ -293,6 +342,7 @@ const Requirements = () => {
             </div>
           </div>
 
+          {/* General Enrollment Information */}
           <div className="mt-16">
             <Card className="shadow-lg">
               <CardHeader>
