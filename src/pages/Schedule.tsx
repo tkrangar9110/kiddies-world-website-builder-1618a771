@@ -1,7 +1,7 @@
 
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { Clock, Calendar, Sun, Moon } from "lucide-react";
+import { Clock, Calendar, Sun, Moon, BookOpen } from "lucide-react";
 
 const Schedule = () => {
   const dailySchedule = [
@@ -19,6 +19,13 @@ const Schedule = () => {
     { time: "3:00 - 4:00", activity: "Study Class", icon: Calendar }
   ];
 
+  const academicSchedule = [
+    { period: "Registration begins", dates: "July 11, 2024 - August 30, 2024" },
+    { period: "1st Term", dates: "September 2, 2024 to November 28 2024" },
+    { period: "2nd Term", dates: "December 2, 2024 to February 28, 2025" },
+    { period: "4th Term", dates: "June 2, 2025 to July, 2025" }
+  ];
+
   return (
     <div className="min-h-screen">
       <Navigation />
@@ -32,6 +39,32 @@ const Schedule = () => {
             <p className="text-xl text-gray-600 leading-relaxed">
               Structured learning and play times designed for optimal development
             </p>
+          </div>
+
+          {/* Academic Schedule */}
+          <div className="mb-16">
+            <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">
+              Academic Schedule
+            </h2>
+            <div className="bg-white rounded-lg shadow-lg p-8 mb-8">
+              <div className="grid gap-4">
+                {academicSchedule.map((item, index) => (
+                  <div key={index} className="flex items-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                    <div className="bg-blue-500 rounded-full p-2 mr-4">
+                      <BookOpen className="h-5 w-5 text-white" />
+                    </div>
+                    <div className="flex-1">
+                      <div className="flex flex-col sm:flex-row sm:items-center">
+                        <span className="font-semibold text-blue-600 text-lg mr-4 mb-1 sm:mb-0">
+                          {item.period}
+                        </span>
+                        <span className="text-gray-700 text-lg">{item.dates}</span>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
 
           {/* Daily Schedule */}
