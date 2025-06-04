@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Heart, Menu, X } from "lucide-react";
@@ -12,10 +11,10 @@ const Navigation = () => {
     { name: "Home", path: "/" },
     { name: "About Us", path: "/about" },
     { name: "Academics", path: "/academics" },
+    { name: "Requirements", path: "/requirements" },
     { name: "Schedule", path: "/schedule" },
     { name: "Staff", path: "/staff" },
     { name: "Gallery", path: "/gallery" },
-    { name: "Contact", path: "/contact" },
   ];
 
   const isActive = (path: string) => location.pathname === path;
