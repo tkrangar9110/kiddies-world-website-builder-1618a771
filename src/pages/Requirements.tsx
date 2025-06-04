@@ -1,7 +1,7 @@
 
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { BookOpen, GraduationCap, Users, Brain, Star, CheckCircle } from "lucide-react";
+import { BookOpen, GraduationCap, Users, Brain, Star, CheckCircle, Package, Baby } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const Requirements = () => {
@@ -112,6 +112,48 @@ const Requirements = () => {
     }
   ];
 
+  const supplierRequirements = [
+    {
+      title: "Day Care & Nursery - Not Potty Trained",
+      icon: Baby,
+      color: "bg-red-500",
+      dailySupplies: [
+        "Five (5) diapers daily",
+        "2 boxes of wipes (80-100 counts)",
+        "Diaper cream",
+        "Powder (for diaper changes)",
+        "Clothes to change",
+        "Footwear",
+        "Blanket"
+      ],
+      note: "All supplies must be brought every day of school"
+    },
+    {
+      title: "Children Being Potty Trained",
+      icon: Package,
+      color: "bg-yellow-500",
+      dailySupplies: [
+        "Two (2) diapers",
+        "1 box of wipes (80 counts)",
+        "Clothes to change",
+        "Footwear", 
+        "Blanket"
+      ],
+      note: "Please bring clothes to change and footwear and blanket every day of school"
+    }
+  ];
+
+  const nurserySupplies = [
+    { item: "1 Dozen copy books", provider: "Provided by parents" },
+    { item: "2 packs of Jumbo color pencils", provider: "Provided by parents" },
+    { item: "2 packs of Pencils", provider: "Provided by parents" },
+    { item: "1 pack of erasers & 1 pack of sharpeners", provider: "Provided by parents" },
+    { item: "Early Mathematics Book 1", provider: "Provided by school" },
+    { item: "My ABC Book", provider: "Provided by school" },
+    { item: "Jumbo Coloring & Activities Book", provider: "Provided by school" },
+    { item: "Cat Book, Kitty Cat (Reader)", provider: "Provided by parents" }
+  ];
+
   return (
     <div className="min-h-screen">
       <Navigation />
@@ -127,56 +169,128 @@ const Requirements = () => {
             </p>
           </div>
 
-          <div className="grid gap-8">
-            {gradeRequirements.map((grade, index) => {
-              const IconComponent = grade.icon;
-              return (
-                <Card key={index} className="shadow-lg">
-                  <CardHeader>
-                    <div className="flex items-center mb-4">
-                      <div className={`${grade.color} rounded-full p-3 mr-4`}>
-                        <IconComponent className="h-8 w-8 text-white" />
+          {/* Daily Supplies Requirements */}
+          <div className="mb-16">
+            <h2 className="text-3xl font-bold text-gray-800 text-center mb-8">Daily Supplies Requirements</h2>
+            <div className="grid md:grid-cols-2 gap-8 mb-8">
+              {supplierRequirements.map((supply, index) => {
+                const IconComponent = supply.icon;
+                return (
+                  <Card key={index} className="shadow-lg">
+                    <CardHeader>
+                      <div className="flex items-center mb-4">
+                        <div className={`${supply.color} rounded-full p-3 mr-4`}>
+                          <IconComponent className="h-8 w-8 text-white" />
+                        </div>
+                        <CardTitle className="text-xl text-gray-800">{supply.title}</CardTitle>
                       </div>
-                      <CardTitle className="text-2xl text-gray-800">{grade.title}</CardTitle>
+                    </CardHeader>
+                    
+                    <CardContent>
+                      <ul className="space-y-3">
+                        {supply.dailySupplies.map((item, itemIndex) => (
+                          <li key={itemIndex} className="flex items-start">
+                            <div className="w-2 h-2 bg-blue-500 rounded-full mr-3 mt-2 flex-shrink-0"></div>
+                            <span className="text-gray-600">{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                      <div className="mt-4 p-3 bg-yellow-50 rounded-lg">
+                        <p className="text-sm text-yellow-800 font-medium">{supply.note}</p>
+                      </div>
+                    </CardContent>
+                  </Card>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Nursery Supplies/Requirements */}
+          <div className="mb-16">
+            <Card className="shadow-lg">
+              <CardHeader>
+                <CardTitle className="text-3xl text-gray-800 text-center">
+                  Nursery Supplies & Requirements
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="grid md:grid-cols-2 gap-6">
+                  {nurserySupplies.map((supply, index) => (
+                    <div key={index} className="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
+                      <span className="text-gray-700 font-medium">{supply.item}</span>
+                      <span className={`text-sm px-3 py-1 rounded-full ${
+                        supply.provider.includes('parents') 
+                          ? 'bg-blue-100 text-blue-800' 
+                          : 'bg-green-100 text-green-800'
+                      }`}>
+                        {supply.provider}
+                      </span>
                     </div>
-                  </CardHeader>
-                  
-                  <CardContent>
-                    <div className="grid md:grid-cols-2 gap-8">
-                      <div>
-                        <h3 className="text-lg font-semibold text-gray-700 mb-4 flex items-center">
-                          <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
-                          Basic Requirements
-                        </h3>
-                        <ul className="space-y-3">
-                          {grade.basicRequirements.map((requirement, reqIndex) => (
-                            <li key={reqIndex} className="flex items-start">
-                              <div className="w-2 h-2 bg-blue-500 rounded-full mr-3 mt-2 flex-shrink-0"></div>
-                              <span className="text-gray-600">{requirement}</span>
-                            </li>
-                          ))}
-                        </ul>
+                  ))}
+                </div>
+                <div className="mt-6 p-4 bg-red-50 border-l-4 border-red-500">
+                  <p className="text-red-800 font-semibold">
+                    <strong>Important Note:</strong> All of your child/children school requirements must be given to the school before registration.
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Academic Requirements by Grade */}
+          <div className="mb-16">
+            <h2 className="text-3xl font-bold text-gray-800 text-center mb-8">Academic Requirements by Grade</h2>
+            <div className="grid gap-8">
+              {gradeRequirements.map((grade, index) => {
+                const IconComponent = grade.icon;
+                return (
+                  <Card key={index} className="shadow-lg">
+                    <CardHeader>
+                      <div className="flex items-center mb-4">
+                        <div className={`${grade.color} rounded-full p-3 mr-4`}>
+                          <IconComponent className="h-8 w-8 text-white" />
+                        </div>
+                        <CardTitle className="text-2xl text-gray-800">{grade.title}</CardTitle>
                       </div>
-                      
-                      <div>
-                        <h3 className="text-lg font-semibold text-gray-700 mb-4 flex items-center">
-                          <BookOpen className="h-5 w-5 text-purple-500 mr-2" />
-                          Required Books & Readers
-                        </h3>
-                        <ul className="space-y-3">
-                          {grade.booksAndReaders.map((book, bookIndex) => (
-                            <li key={bookIndex} className="flex items-start">
-                              <div className="w-2 h-2 bg-purple-500 rounded-full mr-3 mt-2 flex-shrink-0"></div>
-                              <span className="text-gray-600">{book}</span>
-                            </li>
-                          ))}
-                        </ul>
+                    </CardHeader>
+                    
+                    <CardContent>
+                      <div className="grid md:grid-cols-2 gap-8">
+                        <div>
+                          <h3 className="text-lg font-semibold text-gray-700 mb-4 flex items-center">
+                            <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
+                            Basic Requirements
+                          </h3>
+                          <ul className="space-y-3">
+                            {grade.basicRequirements.map((requirement, reqIndex) => (
+                              <li key={reqIndex} className="flex items-start">
+                                <div className="w-2 h-2 bg-blue-500 rounded-full mr-3 mt-2 flex-shrink-0"></div>
+                                <span className="text-gray-600">{requirement}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                        
+                        <div>
+                          <h3 className="text-lg font-semibold text-gray-700 mb-4 flex items-center">
+                            <BookOpen className="h-5 w-5 text-purple-500 mr-2" />
+                            Required Books & Readers
+                          </h3>
+                          <ul className="space-y-3">
+                            {grade.booksAndReaders.map((book, bookIndex) => (
+                              <li key={bookIndex} className="flex items-start">
+                                <div className="w-2 h-2 bg-purple-500 rounded-full mr-3 mt-2 flex-shrink-0"></div>
+                                <span className="text-gray-600">{book}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
                       </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              );
-            })}
+                    </CardContent>
+                  </Card>
+                );
+              })}
+            </div>
           </div>
 
           <div className="mt-16">
