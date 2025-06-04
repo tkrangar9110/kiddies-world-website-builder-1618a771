@@ -25,13 +25,10 @@ const AboutUs = () => {
                 <div className="bg-blue-600 rounded-full p-3 mr-4">
                   <Heart className="h-8 w-8 text-white" />
                 </div>
-                <h2 className="text-3xl font-bold text-gray-800">Our Mission</h2>
+                <h2 className="text-3xl font-bold text-gray-800">Mission Statement</h2>
               </div>
               <p className="text-gray-600 leading-relaxed text-lg">
-                To provide a safe, developmentally inclusive environment where children 
-                from Day-Care through Grade 3 can thrive. Our focus is on stimulating 
-                early learning and supporting social/emotional, physical, and cognitive 
-                development while nurturing each child's natural desire to be a life-long learner.
+                The mission of the Kiddies World Kinder Care Center is to provide the highest quality care, while creating a nurturing and supportive environment for children, parents, and highly skilled staff. Through a play-based program that attends to the whole child, we seek to enrich every child's experience, and to empower each child to joyfully develop at his/her own rate. Through, the cooperative partnership of parents and staff, we provide a model of community that will sustain and enrich our children throughout their lives.
               </p>
             </div>
 
@@ -65,13 +62,10 @@ const AboutUs = () => {
 
           <div className="bg-white rounded-lg shadow-lg p-8">
             <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center">
-              Our Commitment to Families
+              Vision Statement
             </h2>
             <p className="text-gray-600 leading-relaxed text-lg text-center max-w-3xl mx-auto">
-              We are committed to the families we serve, providing support and encouragement 
-              throughout each child's educational journey. We believe in partnering with parents 
-              to create a seamless bridge between home and school, ensuring every child receives 
-              the care, attention, and educational foundation they need to succeed.
+              We provide a safe, developmentally, inclusive environment for: Day-Care, toddlers, Nursery, Pre-K, Pre-1st, Grade 1, 2, & Grade 3 school age children. Our focus is to provide stimulating early learning and social/emotional, physical and cognitive development. Our goal is to support and nurture that children's and our worn natural desire to be life-long learners. We are committed to the families we serve, providing support and encouragement.
             </p>
           </div>
         </div>
