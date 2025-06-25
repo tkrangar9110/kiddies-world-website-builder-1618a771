@@ -17,14 +17,19 @@ const Gallery = () => {
       color: "from-yellow-400 to-orange-500",
       images: [
         { 
-          src: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=600&fit=crop", 
+          src: "/lovable-uploads/7837ad24-bc9f-49cb-8775-d31f025aa5eb.png", 
           alt: "Awards ceremony", 
           caption: "Annual Achievement Awards" 
         },
         { 
-          src: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=800&h=600&fit=crop", 
+          src: "/lovable-uploads/d9c49945-a627-427f-bd40-476e81fd3b69.png", 
           alt: "Trophy presentation", 
           caption: "Excellence in Learning" 
+        },
+        { 
+          src: "/lovable-uploads/69c4d973-55c7-40a1-8c14-c7b69feaa7f1.png", 
+          alt: "Award winners", 
+          caption: "Student Achievement Recognition" 
         },
       ]
     },
@@ -35,19 +40,24 @@ const Gallery = () => {
       color: "from-blue-400 to-purple-500",
       images: [
         { 
-          src: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800&h=600&fit=crop", 
+          src: "/lovable-uploads/5f497004-653d-4f83-8b3f-430d657342a4.png", 
           alt: "Career day costumes", 
           caption: "Future Professionals Day" 
         },
         { 
-          src: "https://images.unsplash.com/photo-1487252665478-49b61b47f302?w=800&h=600&fit=crop", 
+          src: "/lovable-uploads/bc1417d7-fa75-4a70-bee9-3d3128a6e449.png", 
           alt: "Students in professional attire", 
           caption: "When I Grow Up Theme" 
         },
         { 
-          src: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=600&fit=crop", 
+          src: "/lovable-uploads/ab807f95-6fe5-496b-891f-78dfe9d0a3b0.png", 
           alt: "Career exploration", 
           caption: "Discovering Dream Jobs" 
+        },
+        { 
+          src: "/lovable-uploads/a03d7f02-4e9a-40ae-ba24-66f2c88daeaf.png", 
+          alt: "Professional dress up", 
+          caption: "Career Exploration Day" 
         },
       ]
     },
@@ -58,14 +68,14 @@ const Gallery = () => {
       color: "from-pink-400 to-red-500",
       images: [
         { 
-          src: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=800&h=600&fit=crop", 
+          src: "/lovable-uploads/5303db98-928c-4f11-b7a7-c1bbaa3e7563.png", 
           alt: "School celebration", 
           caption: "Community Family Day" 
         },
         { 
-          src: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800&h=600&fit=crop", 
-          alt: "Outdoor school event", 
-          caption: "Annual School Picnic" 
+          src: "/lovable-uploads/1b50bf9f-e7ec-4873-9a2e-c3a2a816f619.png", 
+          alt: "Student showcase", 
+          caption: "Special Events & Celebrations" 
         },
       ]
     },
@@ -76,26 +86,16 @@ const Gallery = () => {
       color: "from-green-400 to-blue-500",
       images: [
         { 
-          src: "https://images.unsplash.com/photo-1487252665478-49b61b47f302?w=800&h=600&fit=crop", 
+          src: "/lovable-uploads/01734933-3bf6-42c6-8e3a-dc2d82da3c54.png", 
           alt: "Students learning", 
           caption: "Interactive Learning Session" 
-        },
-        { 
-          src: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=600&fit=crop", 
-          alt: "Educational activity", 
-          caption: "Hands-on Discovery" 
-        },
-        { 
-          src: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800&h=600&fit=crop", 
-          alt: "Creative learning", 
-          caption: "Creative Expression Time" 
         },
       ]
     }
   ];
 
-  console.log('Gallery categories with new image paths:', galleryCategories);
-  console.log('New image URLs being used:', galleryCategories.map(cat => cat.images.map(img => img.src)));
+  console.log('Gallery updated with real uploaded images');
+  console.log('Using image paths:', galleryCategories.map(cat => cat.images.map(img => img.src)));
 
   return (
     <div className="min-h-screen">
