@@ -31,6 +31,16 @@ const Gallery = () => {
           alt: "Award winners", 
           caption: "Student Achievement Recognition" 
         },
+        { 
+          src: "/lovable-uploads/e32c67c2-288c-45fa-b882-f9bce407c63e.png", 
+          alt: "Staff and parents celebration", 
+          caption: "Community Achievement Celebration" 
+        },
+        { 
+          src: "/lovable-uploads/3b32148d-6269-417f-ac26-619fb8212f56.png", 
+          alt: "Award ceremony group photo", 
+          caption: "Excellence Recognition Event" 
+        },
       ]
     },
     {
@@ -58,6 +68,26 @@ const Gallery = () => {
           src: "/lovable-uploads/a03d7f02-4e9a-40ae-ba24-66f2c88daeaf.png", 
           alt: "Professional dress up", 
           caption: "Career Exploration Day" 
+        },
+        { 
+          src: "/lovable-uploads/5a10a917-69a1-4e40-8218-4b2b2e853c24.png", 
+          alt: "Medical professionals career day", 
+          caption: "Future Doctors and Nurses" 
+        },
+        { 
+          src: "/lovable-uploads/19c48a8a-bca2-47b7-92e9-8952e7616f7c.png", 
+          alt: "Doctor costume career day", 
+          caption: "Little Doctor in Training" 
+        },
+        { 
+          src: "/lovable-uploads/dba5b16b-469d-42dc-bd3f-58c4a17955aa.png", 
+          alt: "Firefighter costume", 
+          caption: "Future Firefighter Hero" 
+        },
+        { 
+          src: "/lovable-uploads/0ffa3823-937c-4f14-a4d8-a22ddcf19f45.png", 
+          alt: "Firefighter in action", 
+          caption: "Emergency Services Career Day" 
         },
       ]
     },
@@ -90,12 +120,17 @@ const Gallery = () => {
           alt: "Students learning", 
           caption: "Interactive Learning Session" 
         },
+        { 
+          src: "/lovable-uploads/2fd2bea9-465c-4a5b-bba7-20ffb421176f.png", 
+          alt: "Happy students in classroom", 
+          caption: "Classroom Joy and Learning" 
+        },
       ]
     }
   ];
 
-  console.log('Gallery updated with real uploaded images');
-  console.log('Using image paths:', galleryCategories.map(cat => cat.images.map(img => img.src)));
+  console.log('Gallery updated with new uploaded images');
+  console.log('Total images in gallery:', galleryCategories.reduce((total, cat) => total + cat.images.length, 0));
 
   return (
     <div className="min-h-screen">
