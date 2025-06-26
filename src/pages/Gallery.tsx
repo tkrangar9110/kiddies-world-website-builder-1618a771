@@ -41,6 +41,16 @@ const Gallery = () => {
           alt: "Award ceremony group photo", 
           caption: "Excellence Recognition Event" 
         },
+        { 
+          src: "/lovable-uploads/b321771b-8172-4f50-955d-8c7a733ee4c7.png", 
+          alt: "Certificate presentation ceremony", 
+          caption: "Academic Excellence Recognition" 
+        },
+        { 
+          src: "/lovable-uploads/24add711-85ab-4cc1-b9f9-c3b21623c6a6.png", 
+          alt: "Graduation ceremony with certificates", 
+          caption: "Graduation Day Awards" 
+        },
       ]
     },
     {
@@ -107,6 +117,11 @@ const Gallery = () => {
           alt: "Student showcase", 
           caption: "Special Events & Celebrations" 
         },
+        { 
+          src: "/lovable-uploads/dfc5f860-5bc7-4a4f-b407-360f59cb24ba.png", 
+          alt: "Students in elegant dresses at celebration", 
+          caption: "Formal Celebration Event" 
+        },
       ]
     },
     {
@@ -125,11 +140,46 @@ const Gallery = () => {
           alt: "Happy students in classroom", 
           caption: "Classroom Joy and Learning" 
         },
+        { 
+          src: "/lovable-uploads/7cf5898d-9aa9-4b1a-b0f1-4e02db17858c.png", 
+          alt: "Student speaking at graduation", 
+          caption: "Student Leadership Speech" 
+        },
+        { 
+          src: "/lovable-uploads/21c58697-48d8-4abb-9de1-a21ed55be923.png", 
+          alt: "Graduate giving speech", 
+          caption: "Graduation Speech Presentation" 
+        },
+        { 
+          src: "/lovable-uploads/c23aa164-8fd8-489c-9994-fdd176c0660c.png", 
+          alt: "Young graduate with microphone", 
+          caption: "Confident Young Speaker" 
+        },
+        { 
+          src: "/lovable-uploads/280a41ea-b6aa-4369-b031-6c12d0eceada.png", 
+          alt: "Graduation ceremony graduates", 
+          caption: "Proud Graduates Together" 
+        },
+        { 
+          src: "/lovable-uploads/1cb8c0f7-2f40-4504-85e0-b31f0b710f4b.png", 
+          alt: "Group of graduates in caps and gowns", 
+          caption: "Graduation Day Group Photo" 
+        },
+        { 
+          src: "/lovable-uploads/ee64d6b4-fd7e-4704-9f27-5d094a794c81.png", 
+          alt: "Graduate with award ribbon speaking", 
+          caption: "Award Winner Speech" 
+        },
+        { 
+          src: "/lovable-uploads/5d7051cc-81d5-45d7-a162-940eea13d9c1.png", 
+          alt: "Student speaking at podium", 
+          caption: "Public Speaking Excellence" 
+        },
       ]
     }
   ];
 
-  console.log('Gallery updated with new uploaded images');
+  console.log('Gallery updated with additional graduation and celebration images');
   console.log('Total images in gallery:', galleryCategories.reduce((total, cat) => total + cat.images.length, 0));
 
   return (
