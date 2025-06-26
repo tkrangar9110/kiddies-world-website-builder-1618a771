@@ -6,46 +6,20 @@ import { GraduationCap, Heart, Star, Award } from "lucide-react";
 const Staff = () => {
   const staffMembers = [
     {
-      name: "Sarah Johnson",
-      title: "Director & Lead Educator",
-      qualifications: "M.Ed. Early Childhood Education, 15+ years experience",
-      specialties: ["Curriculum Development", "Child Psychology", "Family Engagement"],
-      image: "/placeholder.svg"
+      name: "Mrs. Margaret T. Siaffa",
+      title: "Director & Founder",
+      qualifications: "BBA Business Administration (University of Liberia), B Certificate & Teachers Training Certificates (Catholic Educational Secretariat)",
+      image: "/lovable-uploads/8c13435f-ac7a-4bfc-9ddf-39dd0c8b5de5.png",
+      biography: "Mrs Margaret T Siaffa is a Liberian business woman and a teacher following her mother's footsteps in educating and molding the minds of little children. She is a Christian and is married to Mr Hilton Siaffa Sr. Together they have 5 children. She has been passionate about children from her early age when she would gather her neighbors children and baby sit until they come from the market or work. While baby sitting she would tell them stories, read books to them and engage them with rhymes and outdoor activities. She is focused on the care and education of young children from infancy to eight years. Mrs Siaffa comes with several years of experience as a classroom teacher and as an administrator. She worked as a kindergarten and lower elementary teacher at the St. Teresa's Convent school as a Kindergarten teacher for ten years and went on to serve as dean of student's affairs for five additional years before resigning to open her own childcare center. She started the Kiddies World Kinder Care Center in September 2013. She's passionate about people and children and enjoys the role she plays by coordinating schedules, checking lesson plans, supervising teachers and most importantly working with the kids.",
+      specialties: ["Early Childhood Education", "Administration", "Curriculum Development", "Teacher Supervision"]
     },
     {
-      name: "Maria Rodriguez",
-      title: "Pre-K Lead Teacher",
-      qualifications: "B.A. Elementary Education, Montessori Certified",
-      specialties: ["School Readiness", "Language Development", "Creative Arts"],
-      image: "/placeholder.svg"
-    },
-    {
-      name: "Jennifer Chen",
-      title: "Infant & Toddler Specialist",
-      qualifications: "B.S. Child Development, Infant Care Certification",
-      specialties: ["Early Development", "Nutrition", "Sensory Learning"],
-      image: "/placeholder.svg"
-    },
-    {
-      name: "Michael Thompson",
-      title: "Physical Education Coordinator",
-      qualifications: "B.S. Kinesiology, Youth Fitness Specialist",
-      specialties: ["Motor Skills", "Outdoor Activities", "Health & Wellness"],
-      image: "/placeholder.svg"
-    },
-    {
-      name: "Lisa Williams",
-      title: "Special Needs Coordinator",
-      qualifications: "M.S. Special Education, IEP Specialist",
-      specialties: ["Inclusive Education", "Behavioral Support", "Family Advocacy"],
-      image: "/placeholder.svg"
-    },
-    {
-      name: "David Park",
-      title: "After-School Program Director",
-      qualifications: "B.A. Education, Homework Help Specialist",
-      specialties: ["Academic Support", "Homework Assistance", "Study Skills"],
-      image: "/placeholder.svg"
+      name: "Mrs. Dour-Sahr",
+      title: "Registrar/Administrator",
+      qualifications: "Educational Administration & Management",
+      image: "/lovable-uploads/1c521b19-bc2c-4d3b-9501-4c6cdf4559df.png",
+      biography: "Mrs. Dour-Sahr serves as our dedicated Registrar and Administrator, bringing valuable experience in educational management and student services to Kiddies World.",
+      specialties: ["Registration Management", "Administrative Support", "Student Records", "Family Communication"]
     }
   ];
 
@@ -65,13 +39,15 @@ const Staff = () => {
           </div>
 
           {/* Staff Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-8 mb-16 max-w-6xl mx-auto">
             {staffMembers.map((staff, index) => (
               <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-                <div className="h-64 bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center">
-                  <div className="w-32 h-32 bg-white rounded-full flex items-center justify-center">
-                    <Heart className="h-16 w-16 text-blue-500" />
-                  </div>
+                <div className="h-80 bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center overflow-hidden">
+                  <img 
+                    src={staff.image} 
+                    alt={staff.name}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 
                 <div className="p-6">
@@ -84,6 +60,14 @@ const Staff = () => {
                       <span className="text-sm font-medium text-gray-700">Qualifications:</span>
                     </div>
                     <p className="text-sm text-gray-600 ml-6">{staff.qualifications}</p>
+                  </div>
+                  
+                  <div className="mb-4">
+                    <div className="flex items-center mb-2">
+                      <Heart className="h-4 w-4 text-red-500 mr-2" />
+                      <span className="text-sm font-medium text-gray-700">About:</span>
+                    </div>
+                    <p className="text-sm text-gray-600 ml-6 leading-relaxed">{staff.biography}</p>
                   </div>
                   
                   <div>
