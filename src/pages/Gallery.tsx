@@ -51,6 +51,16 @@ const Gallery = () => {
           alt: "Graduation ceremony with certificates", 
           caption: "Graduation Day Awards" 
         },
+        { 
+          src: "/lovable-uploads/15689b1f-56e7-4a13-9472-c2998adce8a3.png", 
+          alt: "Miss Kiddies World royalty award ceremony", 
+          caption: "Miss & Mr. Kiddies World Royalty" 
+        },
+        { 
+          src: "/lovable-uploads/9da898e2-be86-43d1-90db-ba8827e4930f.png", 
+          alt: "Kiddies World royalty winners", 
+          caption: "Royal Recognition Ceremony" 
+        },
       ]
     },
     {
@@ -122,6 +132,31 @@ const Gallery = () => {
           alt: "Students in elegant dresses at celebration", 
           caption: "Formal Celebration Event" 
         },
+        { 
+          src: "/lovable-uploads/6c1222b5-8ae6-4966-b859-473fdd9f38fb.png", 
+          alt: "Paint and Sip party with students in aprons", 
+          caption: "Paint & Sip Creative Party" 
+        },
+        { 
+          src: "/lovable-uploads/4244c111-11c3-4c57-aff6-74f1c6853b73.png", 
+          alt: "Students lined up for Paint & Sip event", 
+          caption: "Paint & Sip Group Activity" 
+        },
+        { 
+          src: "/lovable-uploads/e888b675-76f1-4b19-940e-9e4cf4449cea.png", 
+          alt: "Children enjoying Paint & Sip party meal", 
+          caption: "Paint & Sip Party Celebration" 
+        },
+        { 
+          src: "/lovable-uploads/e609beac-f107-4bf3-b2f6-b4cfaa8487f0.png", 
+          alt: "Students showing off their artwork", 
+          caption: "Paint & Sip Art Showcase" 
+        },
+        { 
+          src: "/lovable-uploads/297b1883-d8a9-4ae3-99f8-b1d93ec30a1f.png", 
+          alt: "Children displaying their creative paintings", 
+          caption: "Creative Art Exhibition" 
+        },
       ]
     },
     {
@@ -175,11 +210,16 @@ const Gallery = () => {
           alt: "Student speaking at podium", 
           caption: "Public Speaking Excellence" 
         },
+        { 
+          src: "/lovable-uploads/489d92ab-0bab-41e2-872a-cdf61bb4fbaa.png", 
+          alt: "Teacher with students in classroom", 
+          caption: "Engaged Classroom Learning" 
+        },
       ]
     }
   ];
 
-  console.log('Gallery updated with additional graduation and celebration images');
+  console.log('Gallery updated with Paint & Sip party and classroom photos');
   console.log('Total images in gallery:', galleryCategories.reduce((total, cat) => total + cat.images.length, 0));
 
   return (
