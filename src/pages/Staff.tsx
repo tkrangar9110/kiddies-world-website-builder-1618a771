@@ -1,4 +1,3 @@
-
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { GraduationCap, Heart, Star, Award } from "lucide-react";
@@ -76,6 +75,54 @@ const Staff = () => {
       image: "/lovable-uploads/a4614148-dc63-444c-b047-032b971016f2.png",
       biography: "Mrs. Gbaablo is our dedicated 2nd Grade Teacher who builds upon foundational skills to develop more advanced academic abilities. She encourages critical thinking and independent learning.",
       specialties: ["Advanced Elementary Skills", "Critical Thinking", "Independent Learning", "Academic Progress"]
+    },
+    {
+      name: "Miss Wreh",
+      title: "3rd Grade Teacher",
+      qualifications: "Elementary Education & Advanced Curriculum",
+      image: "/lovable-uploads/02a965a8-6c13-48db-8596-5f9cd77f4297.png",
+      biography: "Miss Wreh is our dedicated 3rd Grade Teacher who focuses on developing advanced academic skills and independent learning abilities. She creates challenging yet supportive learning environments that prepare students for higher grade levels.",
+      specialties: ["Advanced Elementary Education", "Critical Reading", "Mathematical Problem Solving", "Independent Study Skills"]
+    },
+    {
+      name: "Miss Thomas",
+      title: "Care Giver",
+      qualifications: "Child Care & Development Certification",
+      image: "/lovable-uploads/f5c381c3-b050-47bc-a0d3-ceca76241623.png",
+      biography: "Miss Thomas is a dedicated Care Giver who provides nurturing support and supervision for children throughout their day at Kiddies World. She ensures a safe and caring environment for all children.",
+      specialties: ["Child Supervision", "Safety Protocols", "Daily Care Routines", "Emotional Support"]
+    },
+    {
+      name: "Miss Johnson",
+      title: "Care Giver",
+      qualifications: "Child Care & Safety Certification",
+      image: "/lovable-uploads/c8ef4bfe-23c6-4120-af14-2a176a58f351.png",
+      biography: "Miss Johnson serves as a caring and attentive Care Giver, supporting children's daily needs and activities. She maintains a warm and secure environment where children feel safe and valued.",
+      specialties: ["Child Care", "Activity Supervision", "Health & Safety", "Behavioral Guidance"]
+    },
+    {
+      name: "Mr. Karr",
+      title: "Support Staff",
+      qualifications: "Educational Support & Maintenance",
+      image: "/lovable-uploads/cf648aa6-75ce-4db9-aa70-aa62e61feaa1.png",
+      biography: "Mr. Karr is an essential member of our Support Staff team, ensuring that our facilities are maintained and safe for all children and staff. He provides reliable support for various school operations.",
+      specialties: ["Facility Maintenance", "Safety Protocols", "Equipment Management", "Operational Support"]
+    },
+    {
+      name: "Miss Borbor",
+      title: "Support Staff",
+      qualifications: "Administrative & Operational Support",
+      image: "/lovable-uploads/9105e1b9-f6fe-4e8b-afd0-a3587c5375a4.png",
+      biography: "Miss Borbor provides valuable Support Staff services, assisting with various administrative and operational tasks that keep Kiddies World running smoothly. She ensures efficient daily operations.",
+      specialties: ["Administrative Support", "Record Keeping", "Communication Assistance", "Daily Operations"]
+    },
+    {
+      name: "Mr. Sleweon",
+      title: "Music Teacher",
+      qualifications: "Music Education & Performance",
+      image: "/lovable-uploads/2c808e23-a2d0-443e-9667-56757e03728f.png",
+      biography: "Mr. Sleweon brings the joy of music to Kiddies World as our dedicated Music Teacher. He introduces children to various musical concepts, instruments, and creative expression through engaging music programs.",
+      specialties: ["Music Education", "Instrument Instruction", "Creative Expression", "Performance Skills"]
     }
   ];
 
