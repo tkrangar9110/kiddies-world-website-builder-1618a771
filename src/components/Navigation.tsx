@@ -1,6 +1,7 @@
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Heart, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 
 const Navigation = () => {
@@ -25,9 +26,11 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <div className="bg-blue-600 rounded-full p-2">
-              <Heart className="h-6 w-6 text-white" />
-            </div>
+            <img 
+              src="/lovable-uploads/85064e33-bb10-4b81-ae99-c6209af82175.png" 
+              alt="Kiddies World Logo" 
+              className="h-12 w-auto"
+            />
             <span className="text-xl font-bold text-gray-800">Kiddies World</span>
           </Link>
 

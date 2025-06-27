@@ -1,6 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Heart, Star, Users } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -36,12 +37,16 @@ const Hero = () => {
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105">
-              Schedule a Tour
-            </Button>
-            <Button size="lg" variant="outline" className="border-2 border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white px-8 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105">
-              Learn More
-            </Button>
+            <Link to="/schedule-tour">
+              <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105">
+                Schedule a Tour
+              </Button>
+            </Link>
+            <Link to="/about">
+              <Button size="lg" variant="outline" className="border-2 border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white px-8 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105">
+                Learn More
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
