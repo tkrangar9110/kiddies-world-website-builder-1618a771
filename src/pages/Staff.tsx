@@ -20,6 +20,62 @@ const Staff = () => {
       image: "/lovable-uploads/1c521b19-bc2c-4d3b-9501-4c6cdf4559df.png",
       biography: "Mrs. Dour-Sahr serves as our dedicated Registrar and Administrator, bringing valuable experience in educational management and student services to Kiddies World.",
       specialties: ["Registration Management", "Administrative Support", "Student Records", "Family Communication"]
+    },
+    {
+      name: "Massa K. Davis",
+      title: "Pre-First Teacher",
+      qualifications: "Early Childhood Education",
+      image: "/lovable-uploads/12214122-ea62-4028-951e-f95e099d9325.png",
+      biography: "Massa K. Davis is our dedicated Pre-First Teacher who specializes in preparing children for their transition to first grade. She focuses on building foundational academic skills while maintaining a nurturing and supportive learning environment.",
+      specialties: ["Pre-First Grade Preparation", "Foundational Skills", "Reading Readiness", "Academic Transition"]
+    },
+    {
+      name: "Miss Toya",
+      title: "Teacher Aide",
+      qualifications: "Child Development & Educational Support",
+      image: "/lovable-uploads/b11b8fa8-6ad8-4740-be33-57cf5db4f5b1.png",
+      biography: "Miss Toya serves as our supportive Teacher Aide, providing essential assistance in classroom management and individual student support. She helps create a positive learning environment for all children.",
+      specialties: ["Classroom Support", "Individual Student Assistance", "Learning Activities", "Behavioral Support"]
+    },
+    {
+      name: "Mrs. Lewis",
+      title: "Pre-Kindergarten Teacher",
+      qualifications: "Pre-K Education & Child Development",
+      image: "/lovable-uploads/d5be9a33-bcf4-459c-ad9a-7c9e1f17e47d.png",
+      biography: "Mrs. Lewis brings expertise in Pre-Kindergarten education, focusing on school readiness and social-emotional development. She creates engaging activities that prepare children for kindergarten success.",
+      specialties: ["Pre-K Curriculum", "School Readiness", "Social Skills Development", "Early Literacy"]
+    },
+    {
+      name: "Miss Kamara",
+      title: "Nursery Teacher",
+      qualifications: "Infant & Toddler Care Certification",
+      image: "/lovable-uploads/3c3dff81-22dd-42ed-9f73-3eaf19ea35a4.png",
+      biography: "Miss Kamara specializes in nursery care and education for our youngest learners. She provides loving, attentive care while introducing early learning concepts through play and exploration.",
+      specialties: ["Infant Care", "Toddler Development", "Early Learning", "Sensory Play"]
+    },
+    {
+      name: "Mrs. King",
+      title: "1st Grade Teacher",
+      qualifications: "Elementary Education Certification",
+      image: "/lovable-uploads/4d5da343-894e-45a4-80f9-5b5ea013d7a1.png",
+      biography: "Mrs. King is our experienced 1st Grade Teacher who focuses on building strong academic foundations in reading, writing, and mathematics. She creates an encouraging environment where young learners can thrive.",
+      specialties: ["Elementary Curriculum", "Reading & Writing", "Mathematics", "Student Assessment"]
+    },
+    {
+      name: "Mrs. Dayrell",
+      title: "Daycare & Toddler Teacher",
+      qualifications: "Toddler Care & Development",
+      image: "/lovable-uploads/1649521d-9216-40ea-9fb3-48f80fb8253e.png",
+      biography: "Mrs. Dayrell provides specialized care and education for our daycare and toddler programs. She creates safe, nurturing environments where young children can explore and learn through play.",
+      specialties: ["Toddler Care", "Developmental Activities", "Safety Management", "Parent Communication"]
+    },
+    {
+      name: "Mrs. Gbaablo",
+      title: "2nd Grade Teacher",
+      qualifications: "Elementary Education & Curriculum Development",
+      image: "/lovable-uploads/a4614148-dc63-444c-b047-032b971016f2.png",
+      biography: "Mrs. Gbaablo is our dedicated 2nd Grade Teacher who builds upon foundational skills to develop more advanced academic abilities. She encourages critical thinking and independent learning.",
+      specialties: ["Advanced Elementary Skills", "Critical Thinking", "Independent Learning", "Academic Progress"]
     }
   ];
 
