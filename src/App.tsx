@@ -13,6 +13,9 @@ import Staff from "./pages/Staff";
 import Gallery from "./pages/Gallery";
 import ContactPage from "./pages/ContactPage";
 import ScheduleTour from "./pages/ScheduleTour";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsOfService from "./pages/TermsOfService";
+import Licensing from "./pages/Licensing";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -33,6 +36,9 @@ const App = () => (
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/schedule-tour" element={<ScheduleTour />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-of-service" element={<TermsOfService />} />
+          <Route path="/licensing" element={<Licensing />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

@@ -1,4 +1,5 @@
 import { Heart, MapPin, Phone, Mail, Clock } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -33,11 +34,11 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-bold mb-4 text-green-400">Quick Links</h4>
             <ul className="space-y-2 text-gray-300">
-              <li><a href="#" className="hover:text-white transition-colors">About Us</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Programs</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Enrollment</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Parent Resources</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Contact</a></li>
+              <li><Link to="/about" className="hover:text-white transition-colors">About Us</Link></li>
+              <li><Link to="/academics" className="hover:text-white transition-colors">Academics</Link></li>
+              <li><Link to="/requirements" className="hover:text-white transition-colors">Requirements</Link></li>
+              <li><Link to="/schedule-tour" className="hover:text-white transition-colors">Schedule a Tour</Link></li>
+              <li><Link to="/contact" className="hover:text-white transition-colors">Contact</Link></li>
             </ul>
           </div>
 
@@ -70,9 +71,9 @@ const Footer = () => {
               © 2024 Kiddies World Kinder Care Center. All rights reserved.
             </p>
             <div className="flex space-x-6 text-sm text-gray-400">
-              <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-              <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
-              <a href="#" className="hover:text-white transition-colors">Licensing</a>
+              <Link to="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
+              <Link to="/terms-of-service" className="hover:text-white transition-colors">Terms of Service</Link>
+              <Link to="/licensing" className="hover:text-white transition-colors">Licensing</Link>
             </div>
           </div>
         </div>
