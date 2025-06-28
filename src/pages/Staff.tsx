@@ -1,8 +1,16 @@
+import { useState } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import ImageModal from "@/components/ImageModal";
 import { GraduationCap, Heart, Star, Award } from "lucide-react";
 
 const Staff = () => {
+  const [selectedImage, setSelectedImage] = useState<{
+    src: string;
+    alt: string;
+    caption: string;
+  } | null>(null);
+
   const staffMembers = [
     {
       name: "Mrs. Margaret T. Siaffa",
@@ -126,6 +134,14 @@ const Staff = () => {
     }
   ];
 
+  const handleImageClick = (imageSrc: string, staffName: string) => {
+    setSelectedImage({
+      src: imageSrc,
+      alt: staffName,
+      caption: staffName
+    });
+  };
+
   return (
     <div className="min-h-screen">
       <Navigation />
@@ -145,11 +161,14 @@ const Staff = () => {
           <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-8 mb-16 max-w-6xl mx-auto">
             {staffMembers.map((staff, index) => (
               <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-                <div className="h-80 bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center overflow-hidden">
+                <div 
+                  className="h-80 bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center overflow-hidden cursor-pointer"
+                  onClick={() => handleImageClick(staff.image, staff.name)}
+                >
                   <img 
                     src={staff.image} 
                     alt={staff.name}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                   />
                 </div>
                 
@@ -240,21 +259,16 @@ const Staff = () => {
               </div>
             </div>
           </div>
-
-          {/* Join Our Team */}
-          <div className="mt-16 bg-gradient-to-r from-green-600 to-blue-600 rounded-lg p-8 text-white text-center">
-            <h3 className="text-2xl font-bold mb-4">Join Our Team</h3>
-            <p className="text-lg leading-relaxed mb-6 max-w-2xl mx-auto">
-              We're always looking for passionate, qualified educators to join our family. 
-              If you're dedicated to nurturing young minds and making a difference in children's lives, 
-              we'd love to hear from you.
-            </p>
-            <button className="bg-white text-green-600 font-semibold px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors">
-              View Open Positions
-            </button>
-          </div>
         </div>
       </section>
+
+      <ImageModal
+        isOpen={!!selectedImage}
+        onClose={() => setSelectedImage(null)}
+        imageSrc={selectedImage?.src || ""}
+        imageAlt={selectedImage?.alt || ""}
+        caption={selectedImage?.caption}
+      />
 
       <Footer />
     </div>

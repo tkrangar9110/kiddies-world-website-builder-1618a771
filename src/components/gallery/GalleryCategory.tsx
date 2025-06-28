@@ -16,9 +16,10 @@ interface GalleryCategoryProps {
       caption: string;
     }>;
   };
+  onImageClick: (src: string, alt: string, caption: string) => void;
 }
 
-const GalleryCategory = ({ category }: GalleryCategoryProps) => {
+const GalleryCategory = ({ category, onImageClick }: GalleryCategoryProps) => {
   const IconComponent = category.icon;
   
   return (
@@ -33,9 +34,12 @@ const GalleryCategory = ({ category }: GalleryCategoryProps) => {
       
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {category.images.map((image, imageIndex) => (
-          <Card key={imageIndex} className="group overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300">
+          <Card key={imageIndex} className="group overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer">
             <CardContent className="p-0">
-              <div className="relative">
+              <div 
+                className="relative"
+                onClick={() => onImageClick(image.src, image.alt, image.caption)}
+              >
                 <AspectRatio ratio={4/3}>
                   <img 
                     src={image.src} 

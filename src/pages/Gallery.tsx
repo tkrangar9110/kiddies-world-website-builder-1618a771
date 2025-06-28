@@ -1,6 +1,8 @@
 
+import { useState } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import ImageModal from "@/components/ImageModal";
 import { Award, Briefcase, GraduationCap, Heart } from "lucide-react";
 import GalleryHero from "@/components/gallery/GalleryHero";
 import FeaturedCarousel from "@/components/gallery/FeaturedCarousel";
@@ -9,6 +11,16 @@ import EventHighlights from "@/components/gallery/EventHighlights";
 import PhotoSharingInfo from "@/components/gallery/PhotoSharingInfo";
 
 const Gallery = () => {
+  const [selectedImage, setSelectedImage] = useState<{
+    src: string;
+    alt: string;
+    caption: string;
+  } | null>(null);
+
+  const handleImageClick = (src: string, alt: string, caption: string) => {
+    setSelectedImage({ src, alt, caption });
+  };
+
   const galleryCategories = [
     {
       title: "Awards & Recognition",
@@ -232,13 +244,25 @@ const Gallery = () => {
           <FeaturedCarousel galleryCategories={galleryCategories} />
           
           {galleryCategories.map((category, categoryIndex) => (
-            <GalleryCategory key={categoryIndex} category={category} />
+            <GalleryCategory 
+              key={categoryIndex} 
+              category={category} 
+              onImageClick={handleImageClick}
+            />
           ))}
 
           <EventHighlights />
           <PhotoSharingInfo />
         </div>
       </section>
+
+      <ImageModal
+        isOpen={!!selectedImage}
+        onClose={() => setSelectedImage(null)}
+        imageSrc={selectedImage?.src || ""}
+        imageAlt={selectedImage?.alt || ""}
+        caption={selectedImage?.caption}
+      />
 
       <Footer />
     </div>

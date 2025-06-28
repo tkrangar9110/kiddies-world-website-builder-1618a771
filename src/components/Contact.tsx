@@ -1,12 +1,59 @@
 
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { MapPin, Phone, Mail, Clock, Calendar } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    childAge: "",
+    message: ""
+  });
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { id, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [id]: value
+    }));
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    const subject = "New Message from Kiddies World Website";
+    const body = `
+Name: ${formData.firstName} ${formData.lastName}
+Email: ${formData.email}
+Phone: ${formData.phone}
+Child's Age/Program Interest: ${formData.childAge}
+
+Message:
+${formData.message}
+    `;
+    
+    const mailtoLink = `mailto:terelouti9110@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailtoLink;
+    
+    // Reset form
+    setFormData({
+      firstName: "",
+      lastName: "",
+      email: "",
+      phone: "",
+      childAge: "",
+      message: ""
+    });
+  };
+
   return (
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
@@ -77,9 +124,11 @@ const Contact = () => {
               <p className="text-gray-600 text-sm mb-4">
                 See our facilities and meet our caring staff. Tours available Monday through Friday.
               </p>
-              <Button className="w-full bg-orange-500 hover:bg-orange-600 text-white">
-                Book Your Tour
-              </Button>
+              <Link to="/schedule-tour">
+                <Button className="w-full bg-orange-500 hover:bg-orange-600 text-white">
+                  Book Your Tour
+                </Button>
+              </Link>
             </div>
           </div>
 
@@ -92,45 +141,80 @@ const Contact = () => {
                 </p>
               </CardHeader>
               <CardContent className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-4">
-                  <div className="space-y-2">
-                    <Label htmlFor="firstName">First Name</Label>
-                    <Input id="firstName" placeholder="Enter your first name" />
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div className="grid md:grid-cols-2 gap-4">
+                    <div className="space-y-2">
+                      <Label htmlFor="firstName">First Name</Label>
+                      <Input 
+                        id="firstName" 
+                        placeholder="Enter your first name" 
+                        value={formData.firstName}
+                        onChange={handleInputChange}
+                        required
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <Label htmlFor="lastName">Last Name</Label>
+                      <Input 
+                        id="lastName" 
+                        placeholder="Enter your last name" 
+                        value={formData.lastName}
+                        onChange={handleInputChange}
+                        required
+                      />
+                    </div>
                   </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="lastName">Last Name</Label>
-                    <Input id="lastName" placeholder="Enter your last name" />
+                  
+                  <div className="grid md:grid-cols-2 gap-4">
+                    <div className="space-y-2">
+                      <Label htmlFor="email">Email</Label>
+                      <Input 
+                        id="email" 
+                        type="email" 
+                        placeholder="Enter your email" 
+                        value={formData.email}
+                        onChange={handleInputChange}
+                        required
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <Label htmlFor="phone">Phone</Label>
+                      <Input 
+                        id="phone" 
+                        placeholder="Enter your phone number" 
+                        value={formData.phone}
+                        onChange={handleInputChange}
+                        required
+                      />
+                    </div>
                   </div>
-                </div>
-                
-                <div className="grid md:grid-cols-2 gap-4">
-                  <div className="space-y-2">
-                    <Label htmlFor="email">Email</Label>
-                    <Input id="email" type="email" placeholder="Enter your email" />
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="phone">Phone</Label>
-                    <Input id="phone" placeholder="Enter your phone number" />
-                  </div>
-                </div>
 
-                <div className="space-y-2">
-                  <Label htmlFor="childAge">Child's Age/Program Interest</Label>
-                  <Input id="childAge" placeholder="e.g., 3 years old - Nursery program" />
-                </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="childAge">Child's Age/Program Interest</Label>
+                    <Input 
+                      id="childAge" 
+                      placeholder="e.g., 3 years old - Nursery program" 
+                      value={formData.childAge}
+                      onChange={handleInputChange}
+                    />
+                  </div>
 
-                <div className="space-y-2">
-                  <Label htmlFor="message">Message</Label>
-                  <Textarea 
-                    id="message" 
-                    placeholder="Tell us about your needs, questions, or schedule preferences..."
-                    className="min-h-[120px]"
-                  />
-                </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="message">Message</Label>
+                    <Textarea 
+                      id="message" 
+                      placeholder="Tell us about your needs, questions, or schedule preferences..."
+                      className="min-h-[120px]"
+                      value={formData.message}
+                      onChange={handleInputChange}
+                      required
+                    />
+                  </div>
 
-                <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 text-lg">
-                  Send Message
-                </Button>
+                  <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 text-lg">
+                    Send Message
+                  </Button>
+                </form>
               </CardContent>
             </Card>
           </div>
