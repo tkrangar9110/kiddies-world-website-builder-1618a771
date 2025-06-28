@@ -1,37 +1,10 @@
 
-import { useState } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Calendar, Clock, MapPin, Phone, Mail, User, Baby } from "lucide-react";
 
 const ScheduleTour = () => {
-  const [formData, setFormData] = useState({
-    parentName: "",
-    childName: "",
-    childAge: "",
-    email: "",
-    phone: "",
-    preferredDate: "",
-    preferredTime: "",
-    message: ""
-  });
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log("Tour request submitted:", formData);
-    // Here you would typically send the data to your backend
-    alert("Thank you for your interest! We'll contact you soon to confirm your tour.");
-  };
-
   return (
     <div className="min-h-screen">
       <Navigation />
@@ -113,7 +86,12 @@ const ScheduleTour = () => {
             <div className="bg-white rounded-lg shadow-lg p-8">
               <h2 className="text-3xl font-bold text-gray-800 mb-6">Request Your Tour</h2>
               
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form action="https://formsubmit.co/terelouti9110@gmail.com" method="POST" className="space-y-6">
+                {/* Hidden fields for better user experience */}
+                <input type="hidden" name="_subject" value="New Tour Request from Kiddies World" />
+                <input type="hidden" name="_next" value={`${window.location.origin}/thank-you`} />
+                <input type="hidden" name="_captcha" value="false" />
+                
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
                     <label htmlFor="parentName" className="block text-sm font-medium text-gray-700 mb-2">
@@ -122,10 +100,8 @@ const ScheduleTour = () => {
                     <input
                       type="text"
                       id="parentName"
-                      name="parentName"
+                      name="Parent Name"
                       required
-                      value={formData.parentName}
-                      onChange={handleInputChange}
                       className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       placeholder="Your full name"
                     />
@@ -138,10 +114,8 @@ const ScheduleTour = () => {
                     <input
                       type="text"
                       id="childName"
-                      name="childName"
+                      name="Child Name"
                       required
-                      value={formData.childName}
-                      onChange={handleInputChange}
                       className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       placeholder="Child's name"
                     />
@@ -155,10 +129,8 @@ const ScheduleTour = () => {
                     </label>
                     <select
                       id="childAge"
-                      name="childAge"
+                      name="Child Age"
                       required
-                      value={formData.childAge}
-                      onChange={handleInputChange}
                       className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     >
                       <option value="">Select age</option>
@@ -181,10 +153,8 @@ const ScheduleTour = () => {
                     <input
                       type="email"
                       id="email"
-                      name="email"
+                      name="Email Address"
                       required
-                      value={formData.email}
-                      onChange={handleInputChange}
                       className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       placeholder="your.email@example.com"
                     />
@@ -198,10 +168,8 @@ const ScheduleTour = () => {
                   <input
                     type="tel"
                     id="phone"
-                    name="phone"
+                    name="Phone Number"
                     required
-                    value={formData.phone}
-                    onChange={handleInputChange}
                     className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="(555) 123-4567"
                   />
@@ -215,9 +183,7 @@ const ScheduleTour = () => {
                     <input
                       type="date"
                       id="preferredDate"
-                      name="preferredDate"
-                      value={formData.preferredDate}
-                      onChange={handleInputChange}
+                      name="Preferred Date"
                       className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     />
                   </div>
@@ -228,9 +194,7 @@ const ScheduleTour = () => {
                     </label>
                     <select
                       id="preferredTime"
-                      name="preferredTime"
-                      value={formData.preferredTime}
-                      onChange={handleInputChange}
+                      name="Preferred Time"
                       className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     >
                       <option value="">Select time</option>
@@ -250,10 +214,8 @@ const ScheduleTour = () => {
                   </label>
                   <textarea
                     id="message"
-                    name="message"
+                    name="Additional Message"
                     rows={4}
-                    value={formData.message}
-                    onChange={handleInputChange}
                     className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="Any specific questions or requirements for your visit..."
                   />
