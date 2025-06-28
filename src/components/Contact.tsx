@@ -1,5 +1,4 @@
 
-import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -9,51 +8,6 @@ import { MapPin, Phone, Mail, Clock, Calendar } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    phone: "",
-    childAge: "",
-    message: ""
-  });
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { id, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [id]: value
-    }));
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    const subject = "New Message from Kiddies World Website";
-    const body = `
-Name: ${formData.firstName} ${formData.lastName}
-Email: ${formData.email}
-Phone: ${formData.phone}
-Child's Age/Program Interest: ${formData.childAge}
-
-Message:
-${formData.message}
-    `;
-    
-    const mailtoLink = `mailto:terelouti9110@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    window.location.href = mailtoLink;
-    
-    // Reset form
-    setFormData({
-      firstName: "",
-      lastName: "",
-      email: "",
-      phone: "",
-      childAge: "",
-      message: ""
-    });
-  };
-
   return (
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
@@ -141,15 +95,19 @@ ${formData.message}
                 </p>
               </CardHeader>
               <CardContent className="space-y-6">
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form action="https://formsubmit.co/terelouti9110@gmail.com" method="POST" className="space-y-6">
+                  {/* Hidden fields for better user experience */}
+                  <input type="hidden" name="_subject" value="New Inquiry from Kiddies World Website" />
+                  <input type="hidden" name="_next" value={`${window.location.origin}/contact?success=true`} />
+                  <input type="hidden" name="_captcha" value="false" />
+                  
                   <div className="grid md:grid-cols-2 gap-4">
                     <div className="space-y-2">
                       <Label htmlFor="firstName">First Name</Label>
                       <Input 
                         id="firstName" 
+                        name="firstName"
                         placeholder="Enter your first name" 
-                        value={formData.firstName}
-                        onChange={handleInputChange}
                         required
                       />
                     </div>
@@ -157,9 +115,8 @@ ${formData.message}
                       <Label htmlFor="lastName">Last Name</Label>
                       <Input 
                         id="lastName" 
+                        name="lastName"
                         placeholder="Enter your last name" 
-                        value={formData.lastName}
-                        onChange={handleInputChange}
                         required
                       />
                     </div>
@@ -170,10 +127,9 @@ ${formData.message}
                       <Label htmlFor="email">Email</Label>
                       <Input 
                         id="email" 
+                        name="email"
                         type="email" 
                         placeholder="Enter your email" 
-                        value={formData.email}
-                        onChange={handleInputChange}
                         required
                       />
                     </div>
@@ -181,9 +137,8 @@ ${formData.message}
                       <Label htmlFor="phone">Phone</Label>
                       <Input 
                         id="phone" 
+                        name="phone"
                         placeholder="Enter your phone number" 
-                        value={formData.phone}
-                        onChange={handleInputChange}
                         required
                       />
                     </div>
@@ -193,9 +148,8 @@ ${formData.message}
                     <Label htmlFor="childAge">Child's Age/Program Interest</Label>
                     <Input 
                       id="childAge" 
+                      name="childAge"
                       placeholder="e.g., 3 years old - Nursery program" 
-                      value={formData.childAge}
-                      onChange={handleInputChange}
                     />
                   </div>
 
@@ -203,10 +157,9 @@ ${formData.message}
                     <Label htmlFor="message">Message</Label>
                     <Textarea 
                       id="message" 
+                      name="message"
                       placeholder="Tell us about your needs, questions, or schedule preferences..."
                       className="min-h-[120px]"
-                      value={formData.message}
-                      onChange={handleInputChange}
                       required
                     />
                   </div>
