@@ -272,11 +272,11 @@ const ScheduleTour = () => {
                 <div className="space-y-2 text-gray-600">
                   <div className="flex items-center">
                     <Phone className="h-4 w-4 mr-2" />
-                    <span>(555) 123-KIDS</span>
+                    <span>0886510567 / 0776445800</span>
                   </div>
                   <div className="flex items-center">
                     <Mail className="h-4 w-4 mr-2" />
-                    <span>info@kiddiesworld.com</span>
+                    <span>kiddiesworldkcc13@gmail.com</span>
                   </div>
                 </div>
               </div>

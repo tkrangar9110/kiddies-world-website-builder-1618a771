@@ -1,4 +1,3 @@
-
 import { Heart, MapPin, Phone, Mail, Clock } from "lucide-react";
 
 const Footer = () => {
@@ -8,9 +7,11 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div className="space-y-4">
             <div className="flex items-center">
-              <div className="bg-blue-600 rounded-full p-2 mr-3">
-                <Heart className="h-6 w-6" />
-              </div>
+              <img 
+                src="/lovable-uploads/85064e33-bb10-4b81-ae99-c6209af82175.png" 
+                alt="Kiddies World Logo" 
+                className="h-8 w-auto mr-3"
+              />
               <h3 className="text-2xl font-bold">Kiddies World</h3>
             </div>
             <p className="text-gray-300">
