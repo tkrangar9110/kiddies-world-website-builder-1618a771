@@ -16,14 +16,14 @@ const Staff = () => {
       name: "Mrs. Margaret T. Siaffa",
       title: "Director & Founder",
       qualifications: "BBA Business Administration (University of Liberia), B Certificate & Teachers Training Certificates (Catholic Educational Secretariat)",
-      image: "/lovable-uploads/8c13435f-ac7a-4bfc-9ddf-39dd0c8b5de5.png",
+      image: "/lovable-uploads/c759b9ef-2e94-465d-b3f4-061d2a3419a1.png",
       biography: "Mrs Margaret T Siaffa is a Liberian business woman and a teacher following her mother's footsteps in educating and molding the minds of little children. She is a Christian and is married to Mr Hilton Siaffa Sr. Together they have 5 children. She has been passionate about children from her early age when she would gather her neighbors children and baby sit until they come from the market or work. While baby sitting she would tell them stories, read books to them and engage them with rhymes and outdoor activities. She is focused on the care and education of young children from infancy to eight years. Mrs Siaffa comes with several years of experience as a classroom teacher and as an administrator. She worked as a kindergarten and lower elementary teacher at the St. Teresa's Convent school as a Kindergarten teacher for ten years and went on to serve as dean of student's affairs for five additional years before resigning to open her own childcare center. She started the Kiddies World Kinder Care Center in September 2013. She's passionate about people and children and enjoys the role she plays by coordinating schedules, checking lesson plans, supervising teachers and most importantly working with the kids.",
       specialties: ["Early Childhood Education", "Administration", "Curriculum Development", "Teacher Supervision"]
     },
     {
       name: "Mrs. Dour-Sahr",
       title: "Registrar/Administrator",
-      qualifications: "Educational Administration & Management",
+      qualifications: "Bachelor of Business Administration (B.B.A.) in Accounting (2017) - United Methodist University, Liberia; Diploma (2013) - Royal Institute for Secretarial Science, Liberia; Diploma & WAEC Certificate (2011) - Cathedral Catholic High School, Liberia",
       image: "/lovable-uploads/1c521b19-bc2c-4d3b-9501-4c6cdf4559df.png",
       biography: "Mrs. Dour-Sahr serves as our dedicated Registrar and Administrator, bringing valuable experience in educational management and student services to Kiddies World.",
       specialties: ["Registration Management", "Administrative Support", "Student Records", "Family Communication"]

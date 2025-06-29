@@ -15,7 +15,7 @@ const ContactForm = () => {
         </p>
       </CardHeader>
       <CardContent className="space-y-6">
-        <form action="https://formsubmit.co/terelouti9110@gmail.com" method="POST" className="space-y-6">
+        <form action="https://formsubmit.co/kiddiesworldkcc13@gmail.com" method="POST" className="space-y-6">
           {/* Hidden fields for better user experience */}
           <input type="hidden" name="_subject" value="New Inquiry from Kiddies World Website" />
           <input type="hidden" name="_next" value={`${window.location.origin}/thank-you`} />
