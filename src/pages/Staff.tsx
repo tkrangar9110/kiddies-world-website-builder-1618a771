@@ -32,7 +32,7 @@ const Staff = () => {
       name: "Massa K. Davis",
       title: "Pre-First Teacher",
       qualifications: "Early Childhood Education",
-      image: "/lovable-uploads/12214122-ea62-4028-951e-f95e099d9325.png",
+      image: "/lovable-uploads/9c864855-9bdb-47e2-b198-4b1eb4b25240.png",
       biography: "Massa K. Davis is our dedicated Pre-First Teacher who specializes in preparing children for their transition to first grade. She focuses on building foundational academic skills while maintaining a nurturing and supportive learning environment.",
       specialties: ["Pre-First Grade Preparation", "Foundational Skills", "Reading Readiness", "Academic Transition"]
     },
@@ -40,7 +40,7 @@ const Staff = () => {
       name: "Miss Toya",
       title: "Teacher Aide",
       qualifications: "Child Development & Educational Support",
-      image: "/lovable-uploads/b11b8fa8-6ad8-4740-be33-57cf5db4f5b1.png",
+      image: "/lovable-uploads/5daf11bb-3885-4c62-b54d-2cc8ca79d317.png",
       biography: "Miss Toya serves as our supportive Teacher Aide, providing essential assistance in classroom management and individual student support. She helps create a positive learning environment for all children.",
       specialties: ["Classroom Support", "Individual Student Assistance", "Learning Activities", "Behavioral Support"]
     },
@@ -48,7 +48,7 @@ const Staff = () => {
       name: "Mrs. Lewis",
       title: "Pre-Kindergarten Teacher",
       qualifications: "Pre-K Education & Child Development",
-      image: "/lovable-uploads/d5be9a33-bcf4-459c-ad9a-7c9e1f17e47d.png",
+      image: "/lovable-uploads/5b739453-552a-44d3-ac6a-5a308ee29244.png",
       biography: "Mrs. Lewis brings expertise in Pre-Kindergarten education, focusing on school readiness and social-emotional development. She creates engaging activities that prepare children for kindergarten success.",
       specialties: ["Pre-K Curriculum", "School Readiness", "Social Skills Development", "Early Literacy"]
     },
@@ -56,7 +56,7 @@ const Staff = () => {
       name: "Miss Kamara",
       title: "Nursery Teacher",
       qualifications: "Infant & Toddler Care Certification",
-      image: "/lovable-uploads/3c3dff81-22dd-42ed-9f73-3eaf19ea35a4.png",
+      image: "/lovable-uploads/a140fb1e-57c1-4d68-9152-74f4de8b4c72.png",
       biography: "Miss Kamara specializes in nursery care and education for our youngest learners. She provides loving, attentive care while introducing early learning concepts through play and exploration.",
       specialties: ["Infant Care", "Toddler Development", "Early Learning", "Sensory Play"]
     },
@@ -64,7 +64,7 @@ const Staff = () => {
       name: "Mrs. King",
       title: "1st Grade Teacher",
       qualifications: "Elementary Education Certification",
-      image: "/lovable-uploads/4d5da343-894e-45a4-80f9-5b5ea013d7a1.png",
+      image: "/lovable-uploads/4128eb87-7103-4f48-a9b3-9b4adcbe76ff.png",
       biography: "Mrs. King is our experienced 1st Grade Teacher who focuses on building strong academic foundations in reading, writing, and mathematics. She creates an encouraging environment where young learners can thrive.",
       specialties: ["Elementary Curriculum", "Reading & Writing", "Mathematics", "Student Assessment"]
     },
@@ -72,7 +72,7 @@ const Staff = () => {
       name: "Mrs. Dayrell",
       title: "Daycare & Toddler Teacher",
       qualifications: "Toddler Care & Development",
-      image: "/lovable-uploads/1649521d-9216-40ea-9fb3-48f80fb8253e.png",
+      image: "/lovable-uploads/c93462bd-5854-4939-b781-79681c9c685b.png",
       biography: "Mrs. Dayrell provides specialized care and education for our daycare and toddler programs. She creates safe, nurturing environments where young children can explore and learn through play.",
       specialties: ["Toddler Care", "Developmental Activities", "Safety Management", "Parent Communication"]
     },
@@ -80,7 +80,7 @@ const Staff = () => {
       name: "Mrs. Gbaablo",
       title: "2nd Grade Teacher",
       qualifications: "Elementary Education & Curriculum Development",
-      image: "/lovable-uploads/a4614148-dc63-444c-b047-032b971016f2.png",
+      image: "/lovable-uploads/7ac34e9a-8125-4130-a4c7-73d390ce8588.png",
       biography: "Mrs. Gbaablo is our dedicated 2nd Grade Teacher who builds upon foundational skills to develop more advanced academic abilities. She encourages critical thinking and independent learning.",
       specialties: ["Advanced Elementary Skills", "Critical Thinking", "Independent Learning", "Academic Progress"]
     },
