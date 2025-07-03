@@ -88,7 +88,7 @@ const Staff = () => {
       name: "Miss Wreh",
       title: "3rd Grade Teacher",
       qualifications: "Elementary Education & Advanced Curriculum",
-      image: "/lovable-uploads/02a965a8-6c13-48db-8596-5f9cd77f4297.png",
+      image: "/lovable-uploads/496b18c4-636f-4e4c-a297-d0bcf7f173ac.png",
       biography: "Miss Wreh is our dedicated 3rd Grade Teacher who focuses on developing advanced academic skills and independent learning abilities. She creates challenging yet supportive learning environments that prepare students for higher grade levels.",
       specialties: ["Advanced Elementary Education", "Critical Reading", "Mathematical Problem Solving", "Independent Study Skills"]
     },
@@ -96,7 +96,7 @@ const Staff = () => {
       name: "Miss Thomas",
       title: "Care Giver",
       qualifications: "Child Care & Development Certification",
-      image: "/lovable-uploads/f5c381c3-b050-47bc-a0d3-ceca76241623.png",
+      image: "/lovable-uploads/847ec20a-f3c9-4af1-b47d-8566fbe53a58.png",
       biography: "Miss Thomas is a dedicated Care Giver who provides nurturing support and supervision for children throughout their day at Kiddies World. She ensures a safe and caring environment for all children.",
       specialties: ["Child Supervision", "Safety Protocols", "Daily Care Routines", "Emotional Support"]
     },
@@ -104,7 +104,7 @@ const Staff = () => {
       name: "Miss Johnson",
       title: "Care Giver",
       qualifications: "Child Care & Safety Certification",
-      image: "/lovable-uploads/c8ef4bfe-23c6-4120-af14-2a176a58f351.png",
+      image: "/lovable-uploads/b6f0e66a-fc73-4989-96d2-14040e13964c.png",
       biography: "Miss Johnson serves as a caring and attentive Care Giver, supporting children's daily needs and activities. She maintains a warm and secure environment where children feel safe and valued.",
       specialties: ["Child Care", "Activity Supervision", "Health & Safety", "Behavioral Guidance"]
     },
@@ -112,7 +112,7 @@ const Staff = () => {
       name: "Mr. Karr",
       title: "Support Staff",
       qualifications: "Educational Support & Maintenance",
-      image: "/lovable-uploads/cf648aa6-75ce-4db9-aa70-aa62e61feaa1.png",
+      image: "/lovable-uploads/672ae71d-467b-4b64-b17c-79778d894513.png",
       biography: "Mr. Karr is an essential member of our Support Staff team, ensuring that our facilities are maintained and safe for all children and staff. He provides reliable support for various school operations.",
       specialties: ["Facility Maintenance", "Safety Protocols", "Equipment Management", "Operational Support"]
     },
@@ -120,7 +120,7 @@ const Staff = () => {
       name: "Miss Borbor",
       title: "Support Staff",
       qualifications: "Administrative & Operational Support",
-      image: "/lovable-uploads/9105e1b9-f6fe-4e8b-afd0-a3587c5375a4.png",
+      image: "/lovable-uploads/f31c4ed5-8ef1-4828-8577-cb7f6f4cc5b3.png",
       biography: "Miss Borbor provides valuable Support Staff services, assisting with various administrative and operational tasks that keep Kiddies World running smoothly. She ensures efficient daily operations.",
       specialties: ["Administrative Support", "Record Keeping", "Communication Assistance", "Daily Operations"]
     },
@@ -131,6 +131,14 @@ const Staff = () => {
       image: "/lovable-uploads/2c808e23-a2d0-443e-9667-56757e03728f.png",
       biography: "Mr. Sleweon brings the joy of music to Kiddies World as our dedicated Music Teacher. He introduces children to various musical concepts, instruments, and creative expression through engaging music programs.",
       specialties: ["Music Education", "Instrument Instruction", "Creative Expression", "Performance Skills"]
+    },
+    {
+      name: "Miss Bleh",
+      title: "Computer Teacher",
+      qualifications: "Computer Science & Educational Technology",
+      image: "/lovable-uploads/044aea3a-c290-4ae7-8112-295ee90561f6.png",
+      biography: "Miss Bleh is our dedicated Computer Teacher who introduces children to the world of technology and digital literacy. She creates age-appropriate computer lessons that help students develop essential 21st-century skills.",
+      specialties: ["Computer Literacy", "Educational Technology", "Digital Skills", "STEM Education"]
     }
   ];
 
